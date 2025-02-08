@@ -22,12 +22,13 @@ RUN unzip -q chromium-compact-language-detector.zip && \
 WORKDIR /root
 RUN rm -rf /root/tmp
 
-# Install Apertium-related libraries (and a test pair)
+# Install Apertium-related libraries, LibreOffice and language pairs (eng-spa-glg)
 
 RUN apt-get -qq update && apt-get -qq install \
     giella-core \
     hfst-ospell \
-    apertium-eng-spa
+    libreoffice \
+    apertium-eng-spa apertium-es-gl apertium-en-gl apertium-en-es
 
 # Install APy
 
